@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="bulb.jpeg" alt="" id="bulb" width="150"> 
+
+<br>
+<button id="btn">Turn ON</button>
+
+  <script >
+    const bulbImage = document.getElementById("bulb");
+const btnClick = document.getElementById("btn");
+
+btnClick.addEventListener('click', () => {
+   const currentSrc= bulbImage.getAttribute("src");
+
+   if(currentSrc === "bulb.jpeg" ){
+    bulbImage.setAttribute("src","bulbon.jpeg");
+      btnClick.innerText = "Turn OFF"
+
+   }else{
+     bulbImage.setAttribute("src", "bulb.jpeg")
+   btnClick.innerText = "Turn ON"
+   }
+})
+  </script>
+   
+</body>
+</html>
+
+
